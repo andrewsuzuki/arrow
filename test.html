@@ -12,8 +12,14 @@
         $(document).ready(function() {
             $("#test").arrow();
 
-            $('a.poo').click(function(e) {
+            $('a.insertimage').click(function(e) {
                 e.preventDefault();
+                $("#test").arrow('imagetest');
+            });
+
+            $('a.insertlink').click(function(e) {
+                e.preventDefault();
+                $("#test").arrow('linktest');
             });
         });
     </script>
@@ -39,10 +45,11 @@
 </head>
 <body>
     <div class="wrapper">
-        hi
+        <a href="#" class="insertimage">insert an image</a> | <a href="#" class="insertlink">insert a link</a>
         <br>
         <form action="./" method="post">
             <div id="test" data-arrowid="thethread">test</div>
+            <input type="submit" name="submit">
         </form>
     </div>
 </body>
